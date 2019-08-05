@@ -2,7 +2,7 @@
 
 {
   "/movie-svc": {
-    "target": "http://157.230.165.191:8000/GMDB-MOVIES/gmdb/api/movies/",
+    "target": "http://157.230.165.191:8000",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",

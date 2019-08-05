@@ -12,8 +12,11 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getMovies() {
-    console.log('Calling movie service');
     return this.http.get('/movie-svc/GMDB-MOVIES/gmdb/api/movies/?search=');
+  }
+
+  getOneMovie(id: number) {
+    return this.http.get('/movie-svc/GMDB-MOVIES/gmdb/api/movies/' + id);
   }
 
 }

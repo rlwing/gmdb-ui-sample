@@ -22,7 +22,6 @@ export class MoviesComponent implements OnInit {
       err => console.error(err),
       () => console.log('movies loaded')
     );
-    console.log(this.movies.length);
   }
 
 }
