@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Dockerize
+1. Install dependencies `$ npm install `
 1. Verify address of movie service gateway in `server.js`
 1. Build production  `$ ng build --prod`
 1. Build docker image `$ docker build -t gmdb/ui . `
