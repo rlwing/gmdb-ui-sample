@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
+## Dockerize
+1. Install dependencies `$ npm install `
+1. Verify address of movie service gateway in `server.js`
+1. Build production  `$ ng build --prod`
+1. Build docker image `$ docker build -t gmdb/ui . `
+1. Run docker image `$ docker run -d -p 4200:4200 --name gmdb-ui gmdb/ui `
+
+* note: To change port, you must change it in `Dockerfile` and `server.js`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
