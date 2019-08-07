@@ -2,14 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-## Dockerize
-1. Install dependencies `$ npm install `
-1. Verify address of movie service gateway in `server.js`
-1. Build production  `$ ng build --prod`
-1. Build docker image `$ docker build -t gmdb/ui . `
-1. Run docker image `$ docker run -d -p 4200:4200 --name gmdb-ui gmdb/ui `
+## Docker Instructions
+1. Ensure gmdb-bridge network is created `docker network inspect gmdb-bridge`
+1. Ensure gmdb-gateway is running on gmdb-bridge network `docker network inspect gmdb-gateway` look for gmdb-bridge network
+1. Build the docker image `docker build -t gmdb/ui`
+1. Run the image `docker run -d -p 4200:4200 --name gmdb-ui --network gmdb-bridge gmdb/ui`
 
-* note: To change port, you must change it in `Dockerfile` and `server.js`
+* note: To change docker port, you must change it in `Dockerfile` and `server.js`.  To change local port, change just the first port number.
 
 ## Development server
 
