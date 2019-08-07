@@ -19,7 +19,6 @@ console.log(__dirname)
 app.use(express.static(path.join(__dirname, 'dist/gmdb-ui')));
 
 // Set our api routes proxy to point to spring boot server
-// app.use('/movie-svc', proxy('http://157.230.165.191:8000/GMDB-MOVIES/gmdb/api/movies/'));
 app.use('/movie-svc', proxy('http://157.230.165.191:8000'));
 
 // Catch all other routes and return the index file
